@@ -57,9 +57,9 @@
 
 
 # 附录: 
- - 1. [大卫的两封信](https://bili-08a04-nq3.github.io/David/letter "点此获取详情")
+ - 1. [大卫的两封信及其体现的爱好](https://bili-08a04-nq3.github.io/David/letter "点此获取详情")
  - 2. [大卫的逆天发言](https://bili-08a04-nq3.github.io/David/saying "点此获取详情")
- - 2. [大卫的日常](https://bili-08a04-nq3.github.io/David/logging "点此获取详情")
+ - 3. [大卫的日常](https://bili-08a04-nq3.github.io/David/logging "点此获取详情")
 
 
 
