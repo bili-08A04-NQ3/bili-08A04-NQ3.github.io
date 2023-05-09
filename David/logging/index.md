@@ -33,6 +33,6 @@
 
 # 2023.5.9
  - 这里传一点大卫的亲手笔记, 关于陈佳琳的
- - [1](https://bili-08a04-nq3.github.io/David/logging/name.png)
- - [2](https://bili-08a04-nq3.github.io/David/logging/school.png)
- - [3](https://bili-08a04-nq3.github.io/David/logging/problem.png)
+ - ![1](https://bili-08a04-nq3.github.io/David/logging/name.png)
+ - ![2](https://bili-08a04-nq3.github.io/David/logging/school.png)
+ - ![3](https://bili-08a04-nq3.github.io/David/logging/problem.png)
