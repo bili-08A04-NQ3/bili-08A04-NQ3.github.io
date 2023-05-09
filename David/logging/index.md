@@ -30,3 +30,9 @@
 # 2023.5.8
  - 5.7 大卫与陈佳林前去游玩, 其母亲不知道是否知晓, 但大卫数次跟r同学谎报地址, 导致r同学被耍得团团转, 午饭没吃成.
  - 大卫自称与陈佳林的关系进一步加深, 且对其学校(新场实验中学)的执念加深.
+
+# 2023.5.9
+ - 这里传一点大卫的亲手笔记, 关于陈佳琳的
+ - [1](https://bili-08a04-nq3.github.io/David/logging/name.png)
+ - [2](https://bili-08a04-nq3.github.io/David/logging/school.png)
+ - [3](https://bili-08a04-nq3.github.io/David/logging/problem.png)
