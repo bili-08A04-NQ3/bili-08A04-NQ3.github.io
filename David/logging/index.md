@@ -36,3 +36,7 @@
  - ![1](https://bili-08a04-nq3.github.io/David/logging/name.png)
  - ![2](https://bili-08a04-nq3.github.io/David/logging/school.png)
  - ![3](https://bili-08a04-nq3.github.io/David/logging/problem.png)
+
+# 2023.5.13
+ - 5.11这天, 大卫辱骂于海旭父母, 后遭于海旭撕历史书, 好死!
+ - 后来大卫下午被接回学校, 好死!
