@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+</head>
+<body>
+{include file=head.html}  
+<!--内页大图开始-->
+{pboot:sort scode={sort:tcode}}<div class="nybanner"><img src="[sort:pic]"/></div>{/pboot:sort}
+<!--内页大图结束-->
+<div class="bg_main">
+  {include file=left.html}
+  <div class="detail w1200">
+    <div class="contact">
+      <div class="box3" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+        <h1>欢迎与我们联系</h1>
+        <p>在这里，您可以在线提交您的问题与需求，我们会尽快联系您或直接在线回复<br>
+          如果急需回复，请致电 <b>{pboot:companyphone}</b></p>
+      </div>
+      <!--留言框架开始-->
+      <div class="formData clearfix" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200">
+        <form class="foot_book" action="{pboot:msgaction}" method="post">
+          <div class="item">
+            <label for="name">姓名</label>
+            <input type="text" name="contacts" id="name" class="txt">
+            <span class="red">*</span></div>
+          <div class="item mr0">
+            <label for="tel">电话</label>
+            <input type="text" name="mobile" id="tel" class="txt">
+            <span class="red">*</span></div>
+          <div class="item liuyan clearfix">
+            <label for="Content">留言内容</label>
+            <textarea type="text" name="content" id="content" maxlength="300"></textarea>
+          </div>
+          <div class="bot fl clearfix">
+            <input type="submit" value="提交" class="sub fr" id="tj">
+          </div>
+        </form>
+        <script>
+			$(function(){
+				$('#tj').click(function(){
+					//alert(1)
+					if($('#name').val()==''){alert('请输入您的姓名！'); $("#name").focus(); return false;}
+					if ($("#tel").val() == "") { alert("请输入你的手机！"); $("#tel").focus(); return false; } 
+					if (!$("#tel").val().match(/^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/)) { alert("手机号码格式不正确！"); $("#tel").focus(); return false;} 
+					
+					if($('#content').val()==''){alert('请输入留言内容！');return false;}
+				})
+			})
+		</script>
+      </div>
+      <!--留言框架结束--> 
+    </div>
+  </div>
+</div>
+{include file=foot.html}
+</body>
+</html>

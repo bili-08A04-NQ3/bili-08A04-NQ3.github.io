@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+</head>
+<body>
+{include file=head.html}  
+<!--内页大图开始-->
+{pboot:sort scode={sort:tcode}}<div class="nybanner"><img src="[sort:pic]"/></div>{/pboot:sort}
+<!--内页大图结束-->
+<div class="bg_main">
+  {include file=left.html}
+  <!--文章内容开始-->
+  <div class="detail w1200" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+    <div class="title">
+      <h1>{content:title}</h1>
+      <div class="clearfix"><span>发布时间：{content:date style=Y-m-d}</span><span>人气：{content:visits}</span></div>
+    </div>
+    <div class="context"> {content:content}</div>
+    <br>
+    <div class="reLink clearfix">
+      <div class="prevLink fl">上一篇：{content:precontent}</div>
+      <div class="nextLink fr">下一篇：{content:nextcontent}</div>
+    </div>
+  </div>
+  <!--文章内容结束--> 
+</div>
+{include file=foot.html}
+</body>
+</html>

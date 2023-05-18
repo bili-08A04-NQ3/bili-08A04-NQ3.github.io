@@ -1,0 +1,12 @@
+<div class="sub_nav w1200 clearfix">
+    <div class="fl" aos="fade-right" aos-easing="ease" aos-duration="700">{sort:name}</div>
+    <!--栏目分类开始-->
+    <div class="fr" aos="fade-left" aos-easing="ease" aos-duration="700">
+      <ul>
+        {pboot:nav num=15 parent={sort:tcode}}
+		<li><a href="[nav:link]" title="[nav:name]" {pboot:if('[nav:scode]'=='{sort:scode}')}class="hover"{/pboot:if} >[nav:name]</a></li>
+		{/pboot:nav}        
+      </ul>
+    </div>
+    <!--栏目分类结束--> 
+  </div>

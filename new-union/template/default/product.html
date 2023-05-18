@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{content:title}-{pboot:sitetitle}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.validator.js"></script>
+<script src="{pboot:sitedomain}/skin/js/pic_tab.js"></script>
+</head>
+<body>
+{include file=head.html}  
+<!--内页大图开始-->
+{pboot:sort scode={sort:tcode}}<div class="nybanner"><img src="[sort:pic]"/></div>{/pboot:sort}
+<!--内页大图结束-->
+<div class="bg_main">
+  {include file=left.html}
+  <!--图片内容开始-->
+  <div class="showPro w1200" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+    <div class="showimgCon clearfix"> 
+      <!--组图开始-->
+      <div class="showimg" id="showimg">
+        <div class="bigimg" id="bigimg">
+          <ul class="list">
+		  {pboot:pics num=10 id={content:id}}
+            <li><img src="[pics:src]" alt=""/></li>
+		  {/pboot:pics}
+			
+          </ul>
+        </div>
+        <div class="smallimg" id="smallimg">
+          <div class="prev"></div>
+          <div class="next"></div>
+          <div class="list">
+            <ul class="listcon">
+            {pboot:pics num=10 id={content:id}}
+            <li><img src="[pics:src]" alt=""/></li>
+		  {/pboot:pics}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--组图结束-->
+      <div class="txtcon">
+        <h1 class="tit">{content:title}</h1>
+        <ul class="txt">
+          <li class="item">{content:description}...</li>
+        </ul>
+        <div class="tel-btn clearfix"><a class="btn ewmbtn btn2" title="立即咨询">立即咨询</a>
+          <div class="tel"><s class="icon"></s><span>全国热线</span><strong>{pboot:companyphone}</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="relateTit">
+      <h3>详情介绍<span class="line"></span></h3>
+    </div>
+    <div class="showContxt"> {content:content}</div>
+    <div class="clearfix"></div>
+    <div class="reLink clearfix">
+      <div class="prevLink fl">上一篇：{content:precontent}</div>
+      <div class="nextLink fr">下一篇：{content:nextcontent}</div>
+    </div>
+  </div>
+  <!--图片内容结束--> 
+  <!--推荐产品开始-->
+  <div class="floor_3_remm w1200">
+    <div class="index_title" aos="fade-up" aos-easing="ease" aos-duration="700">
+      <h3>推荐产品</h3>
+      <p></p>
+    </div>
+    <div class="body" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+      <ul class="clearfix">
+	  {pboot:list scode={sort:scode} num=3}
+        <li><a href="[list:link]" title="[list:title]" class="img"><img src="[list:ico]" alt="[list:title]"></a>
+		<a href="[list:link]" title="[list:title]">
+          <div class="txt">
+            <h3>[list:title]</h3>
+            <span>查看更多</span></div>
+          </a></li>
+      {/pboot:list}
+
+      </ul>
+    </div>
+    <div class="more2" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200">
+      <ul>
+        {pboot:sort scode=13}<li><a href="[sort:link]">了解详情</a></li>{/pboot:sort}
+        <li><a href="javascript:;" class="ewmbtn">立即咨询</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--推荐产品结束--> 
+</div>
+{include file=foot.html}
+</body>
+</html>

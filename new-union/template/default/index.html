@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.adminbuy.cn K257" />
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.cycle.all.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+<script>
+/*banner*/
+$(document).ready(function () {
+        //index(); //滚动
+        $('#BannerSlider').after('<div id="banner_fmenu" class="banner_fmenu">').cycle({
+            fx: 'fade',
+            speed: 'slow',
+            timeout: 5000,
+            pagerEvent: 'mouseover',
+            pause: 1,
+            pager: '#banner_fmenu',
+            next: '#next', // 下一张幻灯片的触发元素
+            prev: '#prev'
+        }); //banner
+
+    });
+</script>
+</head>
+<body>
+{include file=head.html} 
+<!--幻灯片大图开始-->
+<div class="main_banner" aos="flip-left">
+  <div id="BannerSlider" class="banner"> {pboot:slide gid=1 num=10}
+    <div><a href="[slide:link]"><img src="[slide:src]" alt="[slide:title]"/></a></div>
+    {/pboot:slide} </div>
+  <div id="next" class="icon"></div>
+  <div id="prev" class="icon"></div>
+  <!--搜索栏开始-->
+  <div class="search">
+    <div class="w1200">
+      <p>{label:hdx}</p>
+      <div class="hot clearfix"> 
+        <!--热搜词开始-->
+        <div class="left">HOT热门搜索：{pboot:nav parent={sort:tcode} parent=5 num=5}<a href='[nav:link]'>[nav:name]</a>{/pboot:nav} </div>
+        <!--热搜词结束--> 
+        <!--搜索框开始-->
+        <div class="right">
+          <form  name="formsearch" action="{pboot:scaction}">
+            <input class="input" type="text" name="keyword" value="请输入关键字" onfocus="if(this.value==defaultValue)this.value=''" onblur="if(this.value=='')this.value=defaultValue">
+            <input type="submit" value="" class="btn icon">
+          </form>
+        </div>
+        <!--搜索框结束--> 
+      </div>
+    </div>
+  </div>
+  <!--搜索栏结束--> 
+</div>
+<!--幻灯片大图结束--> 
+<!--产品展示开始-->
+<div class="floor_1_main"> {pboot:sort scode=5}
+  <div class="w1200">
+    <div class="index_title" aos="fade-up" aos-easing="ease" aos-duration="700">
+      <h3>[sort:name]</h3>
+      <p></p>
+    </div>
+    <div class="slideTxtBox"> 
+      <!--产品分类开始-->
+      <div class="hd" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+        <ul>
+          {pboot:nav parent={sort:tcode} parent=5 num=6}
+          <li><a href="[nav:link]" title="[nav:name]">[nav:name]</a></li>
+          {/pboot:nav}
+        </ul>
+      </div>
+      
+      <!--产品分类结束-->
+      <div class="bd" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200"> 
+      
+      <!--系列开始-->
+      {pboot:nav num=6 parent=5}
+        <div class="con clearfix">
+          <div class="left">
+            <dl>
+              {pboot:list scode=[nav:scode] num=2 order=sorting}
+              <dd class="d[list:i]">
+                <div class="box1"><a href="[list:link]" title="[list:title]">
+                  <h3>[list:title]</h3>
+                  <p>[list:description]...</p>
+                  <i class="icon"></i><span class="icon"></span></a></div>
+                <div class="box2"><a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]"></a></div>
+              </dd>
+              {/pboot:list}
+            </dl>
+          </div>
+          <!--推荐内容开始-->
+          <div class="right">
+            <div id="slideBox" class="slideBox">
+              <div class="bd2">
+                <ul>
+                  {pboot:list scode=[nav:scode] num=5 order=sorting}
+                  <li><a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]"/>
+                    <h3>[list:title]</h3>
+                    </a></li>
+                  {/pboot:list}
+                </ul>
+              </div>
+              <div class="hd2">
+                <ul>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--推荐内容结束--> 
+        </div>
+        {/pboot:nav}
+        <!--系列结束-->
+        </div>
+    </div>
+    <div class="more" aos="fade-up" aos-easing="ease" aos-duration="700"><a href="[sort:link]">更多产品</a> </div>
+  </div>
+  {/pboot:sort} </div>
+<!--产品展示结束--> 
+<!--小banner开始-->
+<div class="floor_2_main" aos="fade-up" aos-easing="ease" aos-duration="700">
+  <div class="w1200 clearfix">
+    <div class="left">
+      <p>我们庄严承诺</p>
+      <h3>半年<b>包退</b>、一年<b>包修</b>、终身<b>服务</b></h3>
+    </div>
+    <div class="right">
+      <h3>{pboot:companyphone}</h3>
+      <p class="ewmbtn">扫码立即咨询 >> </p>
+    </div>
+    <div class="clear"></div>
+    <img src="{pboot:sitedomain}/skin/images/f2_img.png" class="img"></div>
+</div>
+<!--小banner结束--> 
+<!--技术优势开始-->
+{pboot:sort scode=27}
+<div class="floor_3 w1200">
+  <div class="index_title" aos="fade-up" aos-easing="ease" aos-duration="700">
+    <h3>[sort:name]</h3>
+    <p></p>
+  </div>
+  <ul>
+  
+    {pboot:list scode=[sort:scode] num=5 order=sorting}
+    <li class="clearfix {pboot:if([list:i]%2==0)}l2{/pboot:if}" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="[list:i]00">
+      <div class="left"><img src="[list:ico]"></div>
+      <div class="right">
+        <h3>[list:title]</h3>
+        <b>0[list:i]</b><span></span>
+        <p>[list:content drophtml=1 dropblank=1 len=300]</p>
+       </div>
+    </li>
+    {/pboot:list}
+    
+  </ul>
+</div>
+{/pboot:sort}
+<!--技术优势结束--> 
+<!--小banner开始-->
+<div class="floor_4_main" aos="fade-up" aos-easing="ease" aos-duration="700">
+  <div class="w1200 clearfix">
+    <div class="left">
+      <p><b>矿山智能装备研发制造的先行引导者</b><br />
+        无人化智能化综合配套的生产厂商，实力非凡</p>
+    </div>
+    <div class="right">
+      <h3>{pboot:companyphone}</h3>
+      <p class="ewmbtn">扫码立即咨询 >></p>
+    </div>
+    <div class="clear"></div>
+    <img src="{pboot:sitedomain}/skin/images/f4_img.png"  class="img"></div>
+</div>
+<!--小banner结束--> 
+<!--客户案例开始-->
+<div class="floor_5"> 
+{pboot:sort scode=12}
+  <div class="index_title" aos="fade-up" aos-easing="ease" aos-duration="700">
+    <h3>[sort:name]</h3>
+    <p></p>
+  </div>
+  <div class="picScroll-left w1200" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+    <div class="bd">
+      <ul class="picList">
+        {pboot:list scode=[sort:scode] num=9 order=sorting}
+        <li><a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]">
+          <div class="con">
+            <h3>[list:title]</h3>
+            <span></span>
+            <p>[list:description lencn=40]</p>
+          </div>
+          </a></li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+  </div>
+  {/pboot:sort} </div>
+<!--客户案例结束--> 
+<!--新闻动态开始--> 
+{pboot:sort scode=9}
+<div class="floor_6_main">
+  <div class="index_title" aos="fade-up" aos-easing="ease" aos-duration="700">
+    <h3>[sort:name]</h3>
+    <p></p>
+  </div>
+  <div class="floor_6">
+    <div class="floor_5_1 w1200"> 
+      <!--推荐内容开始--> 
+      {pboot:list scode=[sort:scode] num=1 order=sorting isico=1}
+      <div class="floor_5_z" aos="fade-right" aos-easing="ease" aos-duration="700" aos-delay="100"> <a href="[list:link]" title="[list:title]"><b><img src="[list:ico]" alt="[list:title]"></b><em><span>[list:date style=d]</span>[list:date style=Y-m]</em>
+        <div class="dk">
+          <h3>[list:title]</h3>
+          <p>[list:description lencn=40]</p>
+          <i>查看详情</i></div>
+        </a></div>
+      {/pboot:list} 
+      <!--推荐内容结束-->
+      <div class="floor_5_y" aos="fade-left" aos-easing="ease" aos-duration="700" aos-delay="100">
+        <ul>
+          {pboot:list scode=[sort:scode] num=3 order=sorting}
+          <li><a href="[list:link]" title="[list:title]"><em><span>[list:date style=d]</span>[list:date style=Y-m]</em>
+            <h3>
+              <p>[list:title]<span>[list:description lencn=80]</span></p>
+            </h3>
+            </a></li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{/pboot:sort}
+<!--新闻动态结束--> 
+{include file=foot.html}
+</body>
+</html>
