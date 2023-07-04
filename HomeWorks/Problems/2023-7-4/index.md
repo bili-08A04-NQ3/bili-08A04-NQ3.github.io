@@ -11,4 +11,4 @@
 
 ## 3.
  - 在Rt△ABC中,∠ABC=90度,tan∠C = $\frac{\sqrt{3}}{2}$ ,将△ABC绕点A逆时针旋转60度,得到△AB'C',延长C'B'交AC,BC于D,E如果DE = $2\sqrt{7}$
- - 那么AD的长为:
+ - 那么AD的长为 :
