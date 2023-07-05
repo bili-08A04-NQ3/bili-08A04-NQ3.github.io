@@ -10,7 +10,6 @@
     </script>
 </head>
 
-
 # 数学:2023/7/4
 ## 1.
  - (2017-杨浦一模)如图,点M是△ABC的角平分线AT的中点,点D,E分别在AB,AC边上,线段DE过点M,且∠ADE=∠C
@@ -23,5 +22,5 @@
  - ![1](https://bili-08a04-nq3.github.io/HomeWorks/Problems/2023-7-4/2023-7-4-2.PNG)
 
 ## 3.
- - 在Rt△ABC中,∠ABC=90度,tan∠C = $\frac{\sqrt{3}}{2}$ ,将△ABC绕点A逆时针旋转60度,得到△AB'C',延长C'B'交AC,BC于D,E如果DE = $2\sqrt{7}$
+ - 在Rt△ABC中,∠ABC=90&deg;,tan∠C = $\frac{\sqrt{3}}{2}$ ,将△ABC绕点A逆时针旋转60度,得到△AB'C',延长C'B'交AC,BC于D,E如果DE = $2\sqrt{7}$
  - 那么AD的长为 :
