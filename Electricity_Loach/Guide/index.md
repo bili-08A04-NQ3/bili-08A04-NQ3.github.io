@@ -11,6 +11,12 @@
  - 使用案例:
  - ![1](https://bili-08A04-NQ3.github.io/Electricity_Loach/Guide/setting.png)
 
+## BashLogs
+ - 在BashLogs.txt中抽取一段笑话(有些不宜内容只有在私聊时才能收到), 内容均来自游戏HackNet
+ - bashlog
+ - 使用案例:
+- ![1](https://bili-08A04-NQ3.github.io/Electricity_Loach/Guide/bashlog.png)
+
 ## Repeat
  - 重复某一句话
  - 重复 [String]
@@ -22,12 +28,6 @@
  - 天气 [String(city)]
  - 使用案例:
 - ![1](https://bili-08A04-NQ3.github.io/Electricity_Loach/Guide/weather.png)
-
-## BashLogs
- - 在BashLogs.txt中抽取一段笑话(有些不宜内容只有在私聊时才能收到), 内容均来自游戏HackNet
- - bashlog
- - 使用案例:
-- ![1](https://bili-08A04-NQ3.github.io/Electricity_Loach/Guide/bashlog.png)
 
 ## Points24
  - 24点游戏
